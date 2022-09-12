@@ -757,6 +757,7 @@ const run_on_blame_1 = __webpack_require__(400);
 async function run() {
     try {
         const files = await get_changed_file_1.getChangedFiles();
+	console.log(files);
         core.info(JSON.stringify(files, null, 2));
         if (!files.added.length && !files.modified.length) {
             core.warning('No files to check, exiting...');
